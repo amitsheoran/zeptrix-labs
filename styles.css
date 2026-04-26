@@ -1810,3 +1810,38 @@ section { padding: 6rem 0; position: relative; }
   .apply-section-block { padding: 1.5rem 0; }
   .chip-group label { padding: 0.55rem 0.95rem; font-size: 0.82rem; }
 }
+
+/* ============================================
+   TESTIMONIAL — paragraph spacing & company links
+   ============================================ */
+.testimonial blockquote p {
+  margin: 0;
+}
+.testimonial blockquote p + p {
+  margin-top: 0.85em;
+}
+
+/* Subtle linked company names in author byline */
+.testimonial-meta .role a {
+  color: var(--text-soft);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.25s var(--ease);
+  display: inline-block;
+}
+.testimonial-meta .role a::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: rgba(212, 255, 58, 0.45);
+  transition: background 0.25s var(--ease), bottom 0.25s var(--ease);
+}
+.testimonial-meta .role a:hover {
+  color: var(--lime);
+}
+.testimonial-meta .role a:hover::after {
+  background: var(--lime);
+  bottom: -3px;
+}

@@ -1253,6 +1253,318 @@ section { padding: 6rem 0; position: relative; }
   opacity: 0.55;
 }
 
+/* ============================================
+   REVIEWBOOST PREVIEW MOCKS (products.html)
+   Pixel-close static recreation of the actual deployed screens.
+   ============================================ */
+
+/* --- Browser-frame mock (owner / landing view) --- */
+.rb-browser-mock {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: #0a0a0b;
+  position: relative;
+  aspect-ratio: 16 / 11;
+}
+.rb-browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  height: 28px;
+  background: rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--border);
+}
+.rb-browser-bar .rb-dot {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+}
+.rb-browser-bar .rb-dot:nth-child(1) { background: #ff5f57; }
+.rb-browser-bar .rb-dot:nth-child(2) { background: #ffbd2e; }
+.rb-browser-bar .rb-dot:nth-child(3) { background: #28ca42; }
+.rb-browser-bar .rb-browser-url {
+  margin-left: 12px;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+}
+
+.rb-landing-mock {
+  position: absolute;
+  inset: 28px 0 0 0;
+  padding: 14px 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--text);
+  background:
+    radial-gradient(60% 50% at 50% 0%, rgba(212, 255, 58, 0.16) 0%, transparent 60%),
+    #0a0a0b;
+}
+
+.rb-landing-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+}
+.rb-landing-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+.rb-landing-logo i {
+  color: var(--lime);
+  font-weight: 300;
+}
+.rb-logo-mark {
+  width: 18px; height: 18px;
+  border-radius: 4px;
+  background: var(--lime);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 600;
+  box-shadow: 0 0 14px rgba(212, 255, 58, 0.4);
+}
+.rb-landing-nav-cta {
+  background: var(--lime);
+  color: var(--bg);
+  border-radius: 100px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  box-shadow: 0 4px 16px -4px rgba(212, 255, 58, 0.6);
+}
+
+.rb-landing-hero {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+.rb-landing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+  font-family: var(--font-mono);
+  font-size: 0.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.rb-landing-badge .rb-star {
+  color: var(--lime);
+  font-size: 0.65rem;
+}
+.rb-landing-title {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2.2vw, 1.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+.rb-landing-title i {
+  color: var(--lime);
+  font-weight: 300;
+}
+.rb-landing-subtitle {
+  margin-top: 0.4rem;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+.rb-landing-ctas {
+  margin-top: 0.65rem;
+  display: inline-flex;
+  gap: 0.4rem;
+  font-size: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rb-landing-cta-primary {
+  background: var(--lime);
+  color: var(--bg);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  font-weight: 500;
+  box-shadow: 0 6px 18px -6px rgba(212, 255, 58, 0.6);
+}
+.rb-landing-cta-ghost {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+}
+
+.rb-landing-trusted {
+  margin-top: auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 0.55rem;
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: -0.01em;
+}
+
+/* --- Phone-frame mock (customer hero view) --- */
+.rb-phone-mock {
+  display: grid;
+  place-items: center;
+}
+.rb-phone-frame {
+  width: 100%;
+  max-width: 270px;
+  aspect-ratio: 9 / 18;
+  border-radius: 32px;
+  background: #111;
+  padding: 8px;
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.rb-phone-screen {
+  height: 100%;
+  border-radius: 24px;
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(212, 255, 58, 0.2) 0%, transparent 65%),
+    #0a0a0b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.1rem 0.9rem 0.85rem;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  color: var(--text);
+}
+
+.rb-customer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.18rem 0.55rem;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  font-family: var(--font-mono);
+  font-size: 0.42rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  backdrop-filter: blur(4px);
+}
+.rb-sparkle {
+  color: var(--lime);
+}
+
+.rb-customer-logo {
+  margin-top: 0.85rem;
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--lime);
+  color: var(--bg);
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.4rem;
+  box-shadow: 0 8px 24px -6px rgba(212, 255, 58, 0.55);
+}
+.rb-customer-name {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+.rb-customer-name i {
+  font-weight: 400;
+}
+.rb-customer-type {
+  margin-top: 0.18rem;
+  font-family: var(--font-mono);
+  font-size: 0.42rem;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+}
+
+.rb-customer-stars {
+  margin-top: 0.65rem;
+  display: flex;
+  gap: 0.18rem;
+  color: var(--lime);
+  font-size: 0.85rem;
+  filter: drop-shadow(0 0 6px rgba(212, 255, 58, 0.5));
+}
+
+.rb-customer-q {
+  margin-top: 0.65rem;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  padding: 0 0.5rem;
+}
+.rb-customer-q i {
+  color: var(--lime);
+  font-weight: 300;
+}
+.rb-customer-sub {
+  margin-top: 0.3rem;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  padding: 0 0.5rem;
+  line-height: 1.4;
+}
+
+.rb-customer-cta {
+  margin-top: auto;
+  width: 100%;
+  background: var(--lime);
+  color: var(--bg);
+  padding: 0.45rem 0.7rem;
+  border-radius: 100px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  box-shadow: 0 10px 30px -8px rgba(212, 255, 58, 0.65);
+}
+
+.rb-customer-foot {
+  margin-top: 0.45rem;
+  font-family: var(--font-mono);
+  font-size: 0.4rem;
+  letter-spacing: 0.14em;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+}
+.rb-customer-foot b {
+  color: var(--lime);
+  font-weight: 600;
+}
+
+/* Mobile tweaks for both mocks */
+@media (max-width: 600px) {
+  .rb-landing-title { font-size: 0.95rem; }
+  .rb-landing-subtitle { font-size: 0.55rem; }
+  .rb-landing-ctas { font-size: 0.55rem; }
+}
+
 .footer-bottom {
   padding-top: 2.5rem;
   border-top: 1px solid var(--border);
